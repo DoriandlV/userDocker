@@ -13,8 +13,7 @@ import java.util.List;
 @RequestMapping("user")
 public class UserController {
 
-    @Autowired
-    User user;
+
     @Autowired
     UserRepository repository;
 
@@ -22,13 +21,13 @@ public class UserController {
     public List<User> getAllEmployees() {
         return repository.findAll();
     }
-    @GetMapping("/username")
+    @GetMapping("/usernameandsurname")
     User getUserByName(String name, String surname) {
-        return repository.findUserByName(name,surname);
+        return repository.findByFirstNameAndLastName(name, surname).orElseThrow();
     }
 
     @PostMapping("/users")
-    User createOrSaveEmployee(User newUser) {
+    User createOrSaveEmployee(@RequestBody User newUser) {
         return repository.save(newUser);
     }
 
@@ -38,7 +37,7 @@ public class UserController {
     }
 
     @PutMapping("/users/{id}")
-    User updateUser(User newUser, @PathVariable Long id) {
+    User updateUser(@RequestBody User newUser, @PathVariable Long id) {
 
         return repository.findById(id).map(user -> {
             user.setFirstName(newUser.getFirstName());

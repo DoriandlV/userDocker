@@ -1,14 +1,11 @@
-  spring:
-  datasource:
-    hikari:
-      connectionTimeout: 20000
-      maximumPoolSize : 5
-
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
-    password: password
+    password: mysecretpassword
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
 
   jpa:
     hibernate:
