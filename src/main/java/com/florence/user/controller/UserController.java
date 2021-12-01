@@ -21,7 +21,7 @@ public class UserController {
     public List<User> getAllEmployees() {
         return repository.findAll();
     }
-    @GetMapping("/usernameandsurname")
+    @GetMapping("/userNameAndSurname")
     User getUserByName(String name, String surname) {
         return repository.findByFirstNameAndLastName(name, surname).orElseThrow();
     }
@@ -43,6 +43,7 @@ public class UserController {
             user.setFirstName(newUser.getFirstName());
             user.setLastName(newUser.getLastName());
             user.setEmail(newUser.getEmail());
+            user.setAddress(newUser.getAddress());
             return repository.save(user);
         }).orElseGet(() -> {
             newUser.setUserId(id);
