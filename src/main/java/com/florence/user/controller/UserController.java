@@ -45,7 +45,7 @@ public class UserController {
             user.setEmail(newUser.getEmail());
             user.setAddress(newUser.getAddress());
             return repository.save(user);
-        }).orElseGet(() ->  {
+        }).orElseGet(() -> {
             newUser.setUserId(id);
             return repository.save(newUser);
         });
