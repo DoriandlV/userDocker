@@ -22,6 +22,10 @@ public class UserController {
     public List<User> getAllEmployees() {
         return repository.findAll();
     }
+    @GetMapping("/username")
+    User getUserByName(String name, String surname) {
+        return repository.findUserByName(name,surname);
+    }
 
     @PostMapping("/users")
     User createOrSaveEmployee(User newUser) {
@@ -29,7 +33,7 @@ public class UserController {
     }
 
     @GetMapping("/users/{id}")
-    User getEmployeeById(@PathVariable Long id) {
+    User getUserById(@PathVariable Long id) {
         return repository.findById(id).get();
     }
 
