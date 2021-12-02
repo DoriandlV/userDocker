@@ -22,7 +22,7 @@ public class UserController {
         return repository.findAll();
     }
 
-    @GetMapping(value = "/namesurname")
+    @GetMapping(value = "/nameSurname")
     User getUserByName(String name, String surname) {
 
         return repository.findByFirstNameAndLastName(name, surname).orElseThrow();
