@@ -18,16 +18,18 @@ public class UserController {
     UserRepository repository;
 
     @GetMapping(value = "/users")
-    public List<User> getAllEmployees() {
+    public List<User> getAllUsers() {
         return repository.findAll();
     }
-    @GetMapping("/userNameAndSurname")
+
+    @GetMapping(value = "/namesurname")
     User getUserByName(String name, String surname) {
+
         return repository.findByFirstNameAndLastName(name, surname).orElseThrow();
     }
 
     @PostMapping("/users")
-    User createOrSaveEmployee(@RequestBody User newUser) {
+    User createOrSaveUsers(@RequestBody User newUser) {
         return repository.save(newUser);
     }
 
@@ -52,7 +54,7 @@ public class UserController {
     }
 
     @DeleteMapping("/users/{id}")
-    void deleteEmployee(@PathVariable Long id) {
+    void deleteUsers(@PathVariable Long id) {
         repository.deleteById(id);
     }
 }
