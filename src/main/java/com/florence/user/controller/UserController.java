@@ -1,6 +1,7 @@
 package com.florence.user.controller;
 
 import com.florence.user.entity.User;
+import com.florence.user.exception.NotFoundException;
 import com.florence.user.repository.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,6 @@ import java.util.Optional;
 
 @RestController
 @Slf4j
-@RequestMapping("user")
 public class UserController {
 
     @Autowired
@@ -22,9 +22,9 @@ public class UserController {
         return repository.findAll();
     }
 
-    @GetMapping("/usersfind")
+    @GetMapping(value = "/users",params = {"name","surname"})
     User getUserByName(String name, String surname) {
-        return repository.findByFirstNameAndLastName(name, surname).orElseThrow();
+        return repository.findByFirstNameAndLastName(name, surname).orElseThrow(NotFoundException::new);
     }
 
     @PostMapping("/users")
