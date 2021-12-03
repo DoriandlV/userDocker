@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @Slf4j
@@ -24,7 +23,7 @@ public class UserController {
 
     @GetMapping(value = "/users",params = {"name","surname"})
     User getUserByName(String name, String surname) {
-        return repository.findByFirstNameAndLastName(name, surname).orElseThrow(NotFoundException::new);
+        return repository.findByFirstNameAndLastName(name, surname).orElseThrow(NotFoundException:: new);
     }
 
     @PostMapping("/users")
