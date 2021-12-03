@@ -17,6 +17,8 @@ services:
   user:
     image: user
     container_name: user
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
     build:
       dockerfile: Dockerfile
     ports:
