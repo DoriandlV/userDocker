@@ -7,12 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @Slf4j
 @RequestMapping("user")
 public class UserController {
-
 
     @Autowired
     UserRepository repository;
@@ -22,9 +22,8 @@ public class UserController {
         return repository.findAll();
     }
 
-    @GetMapping(value = "/nameSurname")
+    @GetMapping("/usersfind")
     User getUserByName(String name, String surname) {
-
         return repository.findByFirstNameAndLastName(name, surname).orElseThrow();
     }
 
