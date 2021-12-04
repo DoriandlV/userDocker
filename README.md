@@ -6,9 +6,14 @@
 
 **Start in local or in docker:**
 
-**Local:**`Launch UserApplication in your IDE` `Launch  Docker Desktop with PostgreSQL `
+**Local + Docker:**`Launch UserApplication in your IDE` `Launch  Docker Desktop with PostgreSQL `
 
-**Docker:** 
+* PostgreSQL container:
+     * Ports : "5432:5432"
+     * Username: postgres
+     * Password: mysecretpassword
+
+**Only Docker:** 
 `In you cmd inside the project path launch ...    docker-compose up`
 
 **Postman:**
