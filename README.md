@@ -9,6 +9,10 @@
 **Local:**
 
 `Launch UserApplication in your IDE` 
-`Launch  Docker with PostgreSQL `
+`Launch  Docker Desktop with PostgreSQL `
 
-**Docker:** `in you cmd inside the project launch docker-compose up`
+**Docker:** 
+`In you cmd inside the project path launch ...    docker-compose up`
+
+**Postman:**
+`http://localhost:8080/users`
