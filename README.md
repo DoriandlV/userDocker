@@ -4,10 +4,14 @@
 
 `Maven clean package -DskipTests=true`
 
+**TECH STACK:** 
+     * JDK 1.11
+     * Spring Boot
+     * Maven
 
 **HOW TO START IT:**
 
-**Local + Docker:**`Launch UserApplication in your IDE` `Launch  Docker Desktop with PostgreSQL `
+**Local + Docker:** `Launch UserApplication in your IDE` `Launch  Docker Desktop with PostgreSQL `
 
 * PostgreSQL container:
      * Ports : "5432:5432"
