@@ -6,6 +6,6 @@
 
 **Start in local or in docker:**
 
-**Local:** `spring-boot-microservices-series/catalog-service> ./mvnw spring-boot:run`
+**Local:** `Launch UserApplication with Docker Desktop & postegrSQL `
 
-**Docker:** 
+**Docker:** `docker-compose up`
