@@ -1,6 +1,8 @@
 # User with Docker
 
-### Create Local .jar inside Target folder: `Maven clean package -DskipTests=true`
+### Create Local .jar inside Target folder: 
+
+`Maven clean package -DskipTests=true`
 
 
 **HOW TO START IT:**
