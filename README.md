@@ -4,7 +4,7 @@
 
 `Maven clean package -DskipTests=true`
 
-**Start in local or in docker:**
+**HOW TO START IT:**
 
 **Local + Docker:**`Launch UserApplication in your IDE` `Launch  Docker Desktop with PostgreSQL `
 
