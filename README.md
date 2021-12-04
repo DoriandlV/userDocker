@@ -4,7 +4,7 @@
 
 `Maven clean package -DskipTests=true`
 
-*TECH STACK:
+* TECH STACK:
      * JDK 1.11
      * Spring Boot
      * Maven
