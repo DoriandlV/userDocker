@@ -6,6 +6,9 @@
 
 **Start in local or in docker:**
 
-**Local:** `Launch UserApplication in your IDE & launch with Docker Desktop & postegrSQL `
+**Local:**
 
-**Docker:** `docker-compose up`
+`Launch UserApplication in your IDE` 
+`Launch  Docker with PostgreSQL `
+
+**Docker:** `in you cmd inside the project launch docker-compose up`
