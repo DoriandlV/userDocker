@@ -1,6 +1,6 @@
 # userDocker
 
-### Build all modules:
+### Create Local .jar:
 
 `Maven clean package -DskipTests=true`
 
