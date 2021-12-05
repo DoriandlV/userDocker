@@ -1,11 +1,11 @@
 # User with Docker
 
-* TECH STACK:
+### TECH STACK:
      * JDK 1.11
      * Spring Boot
      * Maven
 
-#### HOW TO START IT:
+### HOW TO START IT:
 
 **Create Local .jar inside Target folder:**
 
