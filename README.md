@@ -1,9 +1,9 @@
 # User with Docker
 
 ### TECH STACK:
-     * JDK 1.11
-     * Spring Boot
-     * Maven
+     - JDK 1.11
+     - Spring Boot
+     - Maven
 
 ### HOW TO START IT:
 
