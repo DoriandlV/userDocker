@@ -7,9 +7,7 @@
 
 ### HOW TO START IT:
 
-**Create Local .jar inside Target folder:**
-
-`Maven clean package -DskipTests=true`
+**Create Local .jar inside Target folder:** `Maven clean package -DskipTests=true`                                                   
 
 **Local + Docker:** `Launch UserApplication in your IDE` `Launch  Docker Desktop with PostgreSQL `
 
@@ -19,7 +17,7 @@
      * Password: mysecretpassword
 
 **Only Docker:** 
-`In you cmd inside the project path launch ...    docker-compose up`
+`In your cmd inside the project path launch ...    docker-compose up`
 
 **Postman:**
 `http://localhost:8080/users`
