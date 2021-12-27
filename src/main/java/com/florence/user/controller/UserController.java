@@ -21,9 +21,9 @@ public class UserController {
         return repository.findAll();
     }
 
-    @GetMapping(value = "/users",params = {"name","surname"})
+    @GetMapping(value = "/users", params = {"name", "surname"})
     User getUserByName(String name, String surname) {
-        return repository.findByFirstNameAndLastName(name, surname).orElseThrow(NotFoundException:: new);
+        return repository.findByFirstNameAndLastName(name, surname).orElseThrow(NotFoundException::new);
     }
 
     @PostMapping("/users")
